@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "password": "Vlaw!217",
+    "database": "resTableMenudb",
     "host": "localhost",
     "dialect": "mysql"
   },
