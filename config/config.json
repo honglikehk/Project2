@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "Vlaw!217",
-    "database": "resTableMenudb",
+    "database": "resTableMenu_db",
     "host": "localhost",
     "dialect": "mysql"
   },
