@@ -1,0 +1,15 @@
+DROP DATABASE IF EXISTS resTableMenu_db;
+
+CREATE DATABASE resTableMenu_db;
+
+USE resTableMenu_db;
+
+CREATE TABLE food(
+id INT AUTO_INCREMENT NOT NULL,
+Name VARCHAR(250) NOT NULL,
+Price DECIMAL(10, 2) NOT NULL,
+`Best Sell` INTEGER,
+`Create_At` TIMESTAMP NOT NULL DEFAULT current_timestamp,
+PRIMARY KEY (id)
+
+);
