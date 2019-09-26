@@ -1,5 +1,0 @@
-DROP DATABASE IF EXISTS resTableMenudb;
-CREATE DATABASE resTableMenudb;
-
-DROP DATABASE IF EXISTS resTableMenudb;
-CREATE DATABASE resTableMenudb;

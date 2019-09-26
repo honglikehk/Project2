@@ -1,3 +1,31 @@
-.list-group-item {
-  line-height: 2.5;
+/* MAKE SURE THE BORDER IN THE TOTAL SIZE */
+* {
+  box-sizing: border-box;
 }
+
+/* CATEGORY BUTTONS */
+a.nav-link {
+background-color: rgb(255, 0, 0);
+color: white;
+height: 60px;
+font-size: 23px;
+border: 3px white solid;
+}
+
+/* FOOD IMAGES */
+img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px;
+  padding: 3px;
+}
+
+
+
+
+
+
+
+
+
