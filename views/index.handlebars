@@ -1,74 +1,43 @@
-<!-- HEADER -->
-<!--<div id="home">-->
-  <!--<div class="container">-->
-  <div class="jumbotron text-center">
-    <!-- <div class="row">-->
-    <!--<div class="col-8 offset-2">-->
-      <h1>{{msg}}</h1>
-      <h2>{{name}}</h2>
+{{> header}}
+
+
+<!-- CATEGORY NAV BAR -->
+{{> navBtn}}
+
+{{!--{{#each menu}}--}}
+<!-- IMAGES, NAME AND DESCRIPTION -->
+<!-- IMAGES -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="/images/Tbone.jpg" alt="Tbone">
     </div>
-  <!--</div> -->
 
+    <!-- NAME and DESCRIPTION -->
+    <div class="col-md-4 text-center">
+      <br><br>
+      <p>Tbone</p>
+      <p>delicious sgadgdgdagfdgdfggagdgdhfdhdf</p>
+      <a class="btn btn-primary" href="#" role="button">Add</a>
+      <a class="btn btn-primary" href="#" role="button">Delete</a>
 
-  <!-- CATEGORY NAV BAR -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-  
-   
-  <ul class="nav nav-pills nav-justified">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Starters</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Mains</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Desserts</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Drinks</a>
-    </li>
-  </ul>
-      </div>
-    </div>
-  </div>
-
-
-  {{!--{{#each menu}}--}}
-  <!-- IMAGES, NAME AND DESCRIPTION -->
-  <!-- IMAGES -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <img src="/images/Tbone.jpg"  alt="Tbone">
-      </div>
-
-      <!-- NAME and DESCRIPTION -->
-      <div class="col-md-4 text-center">
-        <br><br>
-        <p>Tbone</p>
-        <p>delicious sgadgdgdagfdgdfggagdgdhfdhdf</p>
-        <a class="btn btn-primary" href="#" role="button">Add</a>
-        <a class="btn btn-primary" href="#" role="button">Delete</a>
-        
-        <!--<p><span class="name">{{this.dish_name}}</p>
+      <!--<p><span class="name">{{this.dish_name}}</p>
         <p><span class="description">{{this.dish_desc}}</p>-->
-      </div>
-
-
-      <!-- PRICE -->
-      <div class="col-md-4 text-center">
-        <br><br><br>
-        <p>$30</p>
-        <!-- <p><span class="price">{{this.dish_price}}</p>-->
-      </div>
-
-      {{!--{{/each}}--}}
     </div>
-  </div>
 
-  
+
+    <!-- PRICE -->
+    <div class="col-md-4 text-center">
+      <br><br><br>
+      <p>$30</p>
+      <!-- <p><span class="price">{{this.dish_price}}</p>-->
+    </div>
+
+    {{!--{{/each}}--}}
+  </div>
+</div>
+
+
 
 <!-- IMAGES, NAME AND DESCRIPTION -->
 <!-- IMAGES -->
@@ -103,13 +72,13 @@
 </div>
 
 <div class="container">
-<div class="row">
-<div class="col-md-12 text-center">
-  <p> Waiting time: </p>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <p> Waiting time: </p>
 
 
-</div>
-</div>
+    </div>
+  </div>
 </div>
 
 
@@ -121,7 +90,7 @@
     </div>
   </div>
 </div>
-  <!--<form class="clearfix mb-4" action="POST">
+<!--<form class="clearfix mb-4" action="POST">
     <div class="form-group">
       <label for="example-text">Example Text</label>
       <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
@@ -148,5 +117,5 @@
 </div>
 </div>-->
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/js/index.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>

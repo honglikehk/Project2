@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "Vlaw!217",
-    "database": "resTableMenu_db",
-    "host": "localhost",
+    "username": "k9xxzmmb58mzuixv",
+    "password": "uckn7ij5zf52f68k",
+    "database": "mf5n7ujr436kt9bn",
+    "host": "y5s2h87f6ur56vae.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
