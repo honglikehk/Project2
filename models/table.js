@@ -1,8 +1,14 @@
-module.exports = function (sequelize, DataTypes) {
-    var tableOrder = sequelize.define("tableOrder", {
-        dish_name: DataTypes.STRING,
-        dish_price: DataTypes.DECIMAL(10, 2)
-    });
+module.exports = function(sequelize, DataTypes) {
+  var tableOrder = sequelize.define(
+    "tableOrder",
+    {
+      dishName: DataTypes.STRING,
+      dishPrice: DataTypes.DECIMAL(10, 2)
+    },
+    {
+      underscored: true
+    }
+  );
 
-    return tableOrder;
+  return tableOrder;
 };
