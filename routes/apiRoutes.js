@@ -9,10 +9,23 @@ module.exports = function(app) {
   });
 
   // the admin page
-  app.get("/api/admin", (req, res) => {
+  app.get("/auth/login", (req, res) => {
     res.render("admin", {
       title: "Admin Login Page"
     });
+  });
+
+  // login
+  app.post("/auth/login", (req, res) => {
+    console.log(req.body);
+    console.log(req.body.username);
+
+    //TODO: check within the db with the credentails if they match
+
+    res.status(200).json({ data: "Hello World" });
+    // res.render("admin", {
+    //   title: "Admin Login Page"
+    // });
   });
 
   // Create a new example
