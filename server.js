@@ -18,14 +18,15 @@ app.engine(
   "handlebars",
   exphbs({
     defaultLayout: "main",
-    layoutsDir: path.join(__dirname, "views/layouts")
+    layoutsDir: path.join(__dirname, "views/layouts"),
+    partialsDir: path.join(__dirname, "views/partials")
   })
 );
 
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
+//require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
