@@ -1,23 +1,25 @@
 /* eslint-disable camelcase */
 module.exports = function(sequelize, DataTypes) {
   // eslint-disable-next-line camelcase
-  var Italian_data = sequelize.define("italians", {
+  var MenuItem = sequelize.define("MenuItem", {
     // eslint-disable-next-line camelcase
     item_class: DataTypes.STRING,
     dish_name: DataTypes.STRING,
     dish_desc: DataTypes.TEXT,
     dish_price: DataTypes.DECIMAL(10, 2),
-    dish_img: DataTypes.TEXT,
-    isMain: DataTypes.BOOLEAN,
-    isStarter: DataTypes.BOOLEAN,
-    isDesert: DataTypes.BOOLEAN,
-    isDrink: DataTypes.BOOLEAN
+    dish_img: DataTypes.STRING
+    // isMain: DataTypes.BOOLEAN,
+    // isStarter: DataTypes.BOOLEAN,
+    // isDesert: DataTypes.BOOLEAN,
+    // isDrink: DataTypes.BOOLEAN
   });
-  return Italian_data;
+
+  MenuItem.associate = function(db) {
+    MenuItem.belongsTo(db.Restaurant);
+  };
+
+  return MenuItem;
 };
-
-
-
 
 /*Starter.associate = function(models) {
   // Associating Author with Posts

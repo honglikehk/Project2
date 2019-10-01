@@ -3,71 +3,62 @@
 
 
 <!-- CATEGORY NAV BAR -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 text-center">
+{{> navBar}}
 
 
-      <ul class="nav nav-pills nav-justified">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Starters</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/main">Mains</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/dessert">Desserts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/drink">Drinks</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-{{!--{{#each menu}}--}}
-<!-- IMAGES, NAME AND DESCRIPTION -->
-<!-- IMAGES -->
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <img src="/images/Tbone.jpg" alt="Tbone">
+      <br><br>
+      <img src="/images/mushroom_prawns.jpg">
+      <br><br><br><br>
+      <img src="/images/mozza_marinara.jpg">
+      <br><br><br><br>
+      <img src="/images/cheese_pomp.jpg">
+      <br><br><br><br>
+      <img src="/images/mussels_garlic_butter.jpg">
+      <br><br><br><br>
+      <img src="/images/mushroom_app.jpg">
+      <br><br><br><br>
+      <img src="/images/starter.jpg">
     </div>
 
+
+
+
+    <!-- IMAGES, NAME AND DESCRIPTION -->
+    <!-- IMAGES -->
     <!-- NAME and DESCRIPTION -->
+
     <div class="col-md-4 text-center">
       <br><br>
-
       {{#each menuData}}
-      {{#if this.isStarter }}
+      {{#is this.item_class "Starter"}}
       <p>{{this.dish_name}}</p>
       <p>{{this.dish_desc}}</p>
       <p>{{this.dish_price}}</p>
-
       <a class="btn btn-primary" href="#" role="button">Add</a>
       <a class="btn btn-primary" href="#" role="button">Delete</a>
-    <br><br><br><br>
+      <br><br><br><br>
 
-      {{/if}}
+      {{/is}}
       {{/each}}
     </div>
 
 
-  <div class="col-md-4 text-center">
 
 
-<!--Order list-->
-  
-  
-  
-  </div>
 
+    <div class="col-md-4 text-center">
+
+
+      <!--Order list-->
+    </div>
 
 
   </div>
 </div>
+
 
 
 
