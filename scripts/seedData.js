@@ -1,5 +1,6 @@
 require("dotenv").config();
 var db = require("../models");
+var menuItemData = require("./menuItemData.json");
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
@@ -11,21 +12,23 @@ db.sequelize.sync(syncOptions).then(function() {
     returning: true
   })
     .then(restaurants => {
-      console.log("inserted restaruantrs", restaurants);
-      const menuItems = [];
-      // for (let restaurant of restaurants) {
-      menuItems.push({
-        item_class: "Main",
-        dish_name: "Chickens",
-        dish_desc: "kajshdksa",
-        dish_price: 10,
-        dish_img: "/images/ribeye.jpg",
-        RestaurantId: restaurants[0].id
+      console.log("inserted restaruantrs");
+      for (let r = 0; r < restaurants.length; r++) {
+        for (
+          let i = r * (menuItemData.length / 2);
+          i < (r + 1) * (menuItemData.length / 2);
+          i++
+        ) {
+          menuItemData[i].RestaurantId = restaurants[r].id;
+        }
+      }
+      console.log(menuItemData);
+      return db.MenuItem.bulkCreate(menuItemData, {
+        returning: true,
+        logging: true
       });
-      // }
-      return db.MenuItem.bulkCreate(menuItems);
     })
     .then(menuItems => {
-      console.log("all menu items inserted");
+      console.log("all menu items inserted", menuItems);
     });
 });

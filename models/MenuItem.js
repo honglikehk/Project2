@@ -8,10 +8,6 @@ module.exports = function(sequelize, DataTypes) {
     dish_desc: DataTypes.TEXT,
     dish_price: DataTypes.DECIMAL(10, 2),
     dish_img: DataTypes.STRING
-    // isMain: DataTypes.BOOLEAN,
-    // isStarter: DataTypes.BOOLEAN,
-    // isDesert: DataTypes.BOOLEAN,
-    // isDrink: DataTypes.BOOLEAN
   });
 
   MenuItem.associate = function(db) {
