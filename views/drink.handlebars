@@ -9,29 +9,7 @@
 
 
 <!-- CATEGORY NAV BAR -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-
-
-            <ul class="nav nav-pills nav-justified">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Starters</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/main">Mains</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/dessert">Desserts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/drink">Drinks</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+{{> navBar}}
 
 {{!--{{#each menu}}--}}
 <!-- IMAGES, NAME AND DESCRIPTION -->
@@ -47,7 +25,7 @@
             <br><br>
 
             {{#each menuData}}
-            {{#if this.isDrink }}
+            {{#is eq this.item_class "Drinks" }}
             <p>{{this.dish_name}}</p>
             <p>{{this.dish_desc}}</p>
             <p>{{this.dish_price}}</p>
@@ -56,7 +34,7 @@
             <a class="btn btn-primary" href="#" role="button">Delete</a>
             <br><br><br><br>
 
-            {{/if}}
+            {{/is}}
             {{/each}}
         </div>
 
