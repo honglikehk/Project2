@@ -8,15 +8,8 @@ module.exports = function(app) {
     });
   });
 
-  // the admin page
-  app.get("/auth/login", (req, res) => {
-    res.render("admin", {
-      title: "Admin Login Page"
-    });
-  });
-
   // login
-  app.post("/auth/login", (req, res) => {
+  app.post("/auth/login", function(req, res) {
     console.log(req.body);
     console.log(req.body.username);
 
