@@ -1,8 +1,8 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
+var $exampleEmail = $("#exampleInputEmail1");
+var $examplePassword = $("#exampleInputPassword1");
 var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $exampleCheck = $("#exampleCheck1");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -64,22 +64,23 @@ var refreshExamples = function() {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+  var adminLogin = {
+    email: $exampleEmail.val().trim(),
+    password: $examplePassword.val().trim(),
+    saved: $exampleCheck.val()
   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
+  if (!(adminLogin.email && adminLogin.password)) {
+    alert("You must enter an email and password");
     return;
   }
 
-  API.saveExample(example).then(function() {
+  API.saveExample(adminLogin).then(function() {
     refreshExamples();
   });
 
-  $exampleText.val("");
-  $exampleDescription.val("");
+  $exampleEmail.val("");
+  $examplePassword.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked

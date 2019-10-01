@@ -5,6 +5,7 @@ module.exports = function(app) {
   // Load index page
   // eslint-disable-next-line no-unused-vars
   app.get("/", function(req, res) {
+
     db.MenuItem.findAll({}).then(function(menuData) {
       res.render("index", {
         title: "Starters",
@@ -33,6 +34,7 @@ module.exports = function(app) {
         msg: "Welcome!",
         name: "Whateverr Bunnny",
         menuData
+
       });
     });
   });
@@ -62,4 +64,5 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
+
 };
