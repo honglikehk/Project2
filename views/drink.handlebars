@@ -17,7 +17,18 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <img src="/images/Tbone.jpg" alt="Tbone">
+            <br><br>
+            <img src="/images/mushroom_prawns.jpg">
+            <br><br><br><br>
+            <img src="/images/mozza_marinara.jpg">
+            <br><br><br><br>
+            <img src="/images/cheese_pomp.jpg">
+            <br><br><br><br>
+            <img src="/images/mussels_garlic_butter.jpg">
+            <br><br><br><br>
+            <img src="/images/mushroom_app.jpg">
+            <br><br><br><br>
+            <img src="/images/starter.jpg">
         </div>
 
         <!-- NAME and DESCRIPTION -->
@@ -25,7 +36,7 @@
             <br><br>
 
             {{#each menuData}}
-            {{#is eq this.item_class "Drinks" }}
+            {{#is this.item_class "Drinks" }}
             <p>{{this.dish_name}}</p>
             <p>{{this.dish_desc}}</p>
             <p>{{this.dish_price}}</p>

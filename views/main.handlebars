@@ -6,23 +6,42 @@
 <!-- CATEGORY NAV BAR -->
 {{> navBar}}
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <br><br>
+            <img src="/images/chicken-Merlot.jpg">
+            <br><br><br><br>
+            <img src="/images/med_penne.jpg">
+            <br><br><br><br>
+            <img src="/images/spaghetti_pompodor.jpg">
+            <br><br><br><br>
+            <img src="/images/Ravioli_spinach.jpg">
+            <br><br><br><br>
+            <img src="/images/lasagna.jpg">
+            <br><br><br><br>
+            <img src="/images/rav_marinara.jpg">
+            <br><br><br><br>
+            <img src="/images/spagehti_meat_balls.jpg">
+            <br><br><br><br>
+            <img src="/images/chicken_basil_tortelini.jpg">
+            <br><br><br><br>
+            <img src="/images/chick_alfredo.jpg">
+        </div>
 
 
 {{!--{{#each menu}}--}}
 <!-- IMAGES, NAME AND DESCRIPTION -->
 <!-- IMAGES -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <img src="/images/Tbone.jpg" alt="Tbone">
-        </div>
+
+        
 
         <!-- NAME and DESCRIPTION -->
         <div class="col-md-4 text-center">
             <br><br>
 
             {{#each menuData}}
-            {{#if this.isMain }}
+            {{#is this.item_class "Main"}}
             <p>{{this.dish_name}}</p>
             <p>{{this.dish_desc}}</p>
             <p>{{this.dish_price}}</p>
@@ -31,7 +50,7 @@
             <a class="btn btn-primary" href="#" role="button">Delete</a>
             <br><br><br><br>
 
-            {{/if}}
+            {{/is}}
             {{/each}}
         </div>
 

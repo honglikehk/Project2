@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 module.exports = function(sequelize, DataTypes) {
   // eslint-disable-next-line camelcase
-  var MenuItem = sequelize.define("MenuItem", {
+  var MenuItem = sequelize.define("MenuItems", {
     // eslint-disable-next-line camelcase
     item_class: DataTypes.STRING,
     dish_name: DataTypes.STRING,

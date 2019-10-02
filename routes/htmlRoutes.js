@@ -6,7 +6,7 @@ module.exports = function(app) {
   // eslint-disable-next-line no-unused-vars
   app.get("/", function(req, res) {
 
-    db.MenuItem.findAll({}).then(function(menuData) {
+    db.MenuItems.findAll({}).then(function(menuData) {
       res.render("index", {
         title: "Starters",
         msg: "Welcome!",
@@ -17,7 +17,7 @@ module.exports = function(app) {
   });
 
   app.get("/main", function(req, res) {
-    db.MenuItem.findAll({}).then(function(menuData) {
+    db.MenuItems.findAll({}).then(function(menuData) {
       res.render("main", {
         title: "Mains",
         msg: "Welcome!",
@@ -28,7 +28,7 @@ module.exports = function(app) {
   });
 
   app.get("/dessert", function(req, res) {
-    db.MenuItem.findAll({}).then(function(menuData) {
+    db.MenuItems.findAll({}).then(function(menuData) {
       res.render("dessert", {
         title: "Desserts",
         msg: "Welcome!",
@@ -40,7 +40,7 @@ module.exports = function(app) {
   });
 
   app.get("/drink", function(req, res) {
-    db.MenuItem.findAll({}).then(function(menuData) {
+    db.MenuItems.findAll({}).then(function(menuData) {
       res.render("drink", {
         title: "Drinks",
         msg: "Welcome!",
