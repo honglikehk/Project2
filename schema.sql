@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS whateverrr_bunnny;
+DROP DATABASE IF EXISTS mf5n7ujr436kt9bn;
 
-CREATE DATABASE whateverrr_bunnny;
+CREATE DATABASE mf5n7ujr436kt9bn;
 
 
 
