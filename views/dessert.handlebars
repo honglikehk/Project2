@@ -18,7 +18,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <img src="/images/Tbone.jpg" alt="Tbone">
+            <br><br>
+            <img src="/images/tiramasu.jpg">
+            <br><br><br><br>
+            <img src="/images/chocochipcookieskillet_640x480.jpg">
+            <br><br><br><br>
+            <img src="/images/spumoni.jpg">
+            <br><br><br><br>
         </div>
 
         <!-- NAME and DESCRIPTION -->
@@ -26,7 +32,7 @@
             <br><br>
 
             {{#each menuData}}
-            {{#if this.isDesert }}
+            {{#is this.item_class "Desert"}}
             <p>{{this.dish_name}}</p>
             <p>{{this.dish_desc}}</p>
             <p>{{this.dish_price}}</p>
@@ -35,7 +41,7 @@
             <a class="btn btn-primary" href="#" role="button">Delete</a>
             <br><br><br><br>
 
-            {{/if}}
+            {{/is}}
             {{/each}}
         </div>
 

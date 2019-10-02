@@ -1,14 +1,14 @@
 [
     {
         "item_class": "Starter",
-        "dish_name": "Chicken Salad",
+        "dish_name": "blahblahblah",
         "dish_desc": "kajshdksa",
         "dish_price": 10,
         "dish_img": "/images/ribeye.jpg"
     },
     {
-        "item_class": "Main",
-        "dish_name": "Chicken",
+        "item_class": "Starter",
+        "dish_name": "Platter",
         "dish_desc": "kajshdksa",
         "dish_price": 10,
         "dish_img": "/images/ribeye.jpg"
