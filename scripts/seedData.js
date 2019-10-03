@@ -1,34 +1,46 @@
 require("dotenv").config();
 var db = require("../models");
 var menuItemData = require("./menuItemData.json");
+var adminData = require("./adminData.json");
+var restaurantData = require("./restaurantData.json");
 var syncOptions = { force: false };
 
-  // If running a test, set syncOptions.force to true
-  // clearing the `testdb`
+// If running a test, set syncOptions.force to true
+// clearing the `testdb`
 
-  // Starting the server, syncing our models ------------------------------------/
+// Starting the server, syncing our models ------------------------------------/
 
-  db.sequelize.sync(syncOptions).then(function () {
-    db.Restaurant.bulkCreate([{ name: "Popeyes" }, { name: "Kaka" }], {
-      returning: true
+db.sequelize.sync(syncOptions).then(function() {
+  db.Restaurant.bulkCreate(restaurantData, {
+    returning: true
+  })
+    .then(restaurants => {
+      console.log("inserted restaruantrs");
+      // go over each restaurant
+      for (let r = 0; r < restaurants.length; r++) {
+        // create menu item
+        for (let i = 0; i < menuItemData[r].length; i++) {
+          menuItemData[r][i].RestaurantId = restaurants[r].id;
+        }
+        // create
+        adminData[r].RestaurantId = restaurants[r].id;
+      }
+      let menuItems = [];
+      for (let items of menuItemData) {
+        menuItems.push(...items);
+      }
+      return Promise.all([
+        db.MenuItems.bulkCreate(menuItems, {
+          returning: true
+        }),
+        db.Admin.bulkCreate(adminData, {
+          returning: true
+        })
+      ]);
     })
-      .then(restaurants => {
-        console.log("inserted restaruantrs");
-        for (let r = 0; r < restaurants.length; r++) {
-          for (let i = r * (menuItemData.length / 2);
-              i < (r + 1) * (menuItemData.length / 2);
-              i++) 
-              {
-            menuItemData[i].RestaurantId = restaurants[r].id;
-            }
-            }
-            console.log(menuItemData);
-        return db.MenuItems.bulkCreate(menuItemData, {
-          returning: true,
-          logging: true
-        });
-      })
-      .then(MenuItems => {
-        console.log("all menu items inserted", MenuItems);
-      });
-  });
+    .then(([menuItems, admins]) => {
+      console.log(
+        `${menuItems.length} menu items & ${admins.length} admins inserted`
+      );
+    });
+});
