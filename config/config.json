@@ -1,13 +1,8 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "password",
-    "database": "whateverr bunnny",
-=======
-    "password": "Vlaw!217",
     "database": "whateverrr_bunnny",
->>>>>>> f2c6dbf66fe2447a365f94b8296fab503e263351
     "host": "localhost",
     "dialect": "mysql"
   },
