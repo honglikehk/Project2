@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Vlaw!217",
-    "database": "whateverrr_bunnny",
+    "password": "dance",
+    "database": "resTableMenu",
     "host": "localhost",
     "dialect": "mysql"
   },

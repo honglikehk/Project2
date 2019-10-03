@@ -8,19 +8,6 @@ module.exports = function(app) {
     });
   });
 
-  // login
-  app.post("/auth/login", function(req, res) {
-    console.log(req.body);
-    console.log(req.body.username);
-
-    //TODO: check within the db with the credentails if they match
-
-    res.status(200).json({ data: "Hello World" });
-    // res.render("admin", {
-    //   title: "Admin Login Page"
-    // });
-  });
-
   // Create a new example
   app.post("/api/examples", function(req, res) {
     db.Example.create(req.body).then(function(dbExample) {
