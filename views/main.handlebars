@@ -42,14 +42,23 @@
 
             {{#each menuData}}
             {{#is this.item_class "Main"}}
+
+            {{!--<img src="{{this.dish_img}}">--}}
+
             <p>{{this.dish_name}}</p>
             <p>{{this.dish_desc}}</p>
             <p>{{this.dish_price}}</p>
+<<<<<<< HEAD
             <div id="orderBtn">
                 {{> order}}
             </div>
             <!--<a class="btn btn-primary" href="#" role="button">Add</a>
             <a class="btn btn-primary" href="#" role="button">Delete</a>--->
+=======
+
+            {{> order}}
+           
+>>>>>>> origin/master
             <br><br><br><br>
 
             {{/is}}
@@ -62,11 +71,14 @@
             <br><br><br><br>
             <p> Your Order </p>
 
+<<<<<<< HEAD
             
                 <p id="orderList"></p>
             
 
             {{> confirmOrder}}
+=======
+>>>>>>> origin/master
         </div>
 
 
@@ -126,6 +138,7 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+<<<<<<< HEAD
 <script src="/js/cookie.js"></script>
 
 
@@ -157,4 +170,26 @@
             setCookie("orderList", $("#orderList").html(), 1)
         })
 
+=======
+<script>
+ 
+     //$("#add").on("click", function (event) {
+         $('body').on("click", "button[name=add]", function () {
+         alert ($(this).val());
+            //alert("bbbbbbbb");
+            let userData = {
+                //itemName: $("#add").val()
+                itemName: $(this).val()
+            };
+            $.post("/main", userData,
+                function (data) {
+                   // $("#add").text(data.dish_name);
+                    //$("#add").text(data.dish_price);
+                    //$("#matchImg").attr("src", data.photo);
+                    //$("#resultsModal").modal("toggle");
+                    //alert("Adding character...");
+                });
+        })
+    
+>>>>>>> origin/master
 </script>

@@ -57,7 +57,21 @@ module.exports = function(app) {
     });
   });
 
+<<<<<<< HEAD
 
+=======
+  //let currentURL = window.location.origin;
+  app.post("/main", function (req, res) {
+   // console.log("aaaaaaaaaaa");
+    let menuData = req.body;
+    let itemName = menuData.itemName;
+    //let itemPrice = menuData.itemPrice;
+    console.log(itemName);
+    //console.log(itemPrice);
+  
+  });
+  
+>>>>>>> origin/master
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(
