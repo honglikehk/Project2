@@ -40,9 +40,9 @@
             <p>{{this.dish_name}}</p>
             <p>{{this.dish_desc}}</p>
             <p>{{this.dish_price}}</p>
-
-            <a class="btn btn-primary" href="#" role="button">Add</a>
-            <a class="btn btn-primary" href="#" role="button">Delete</a>
+            <div id="orderBtn">
+                {{> order}}
+            </div>
             <br><br><br><br>
 
             {{/is}}
@@ -50,16 +50,15 @@
         </div>
 
 
+        <!--Order list-->
         <div class="col-md-4 text-center">
+            <br><br><br><br>
+            <p> Your Order </p>
 
+            <p id="orderList"></p>
 
-            <!--Order list-->
-
-
-
+            {{> confirmOrder}}
         </div>
-
-
 
     </div>
 </div>
@@ -79,13 +78,13 @@
 
 
 
-<div class="container">
+<!--<div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
             <a class="btn btn-primary" href="#" role="button">Confirm Order</a>
         </div>
     </div>
-</div>
+</div>-->
 <!--<form class="clearfix mb-4" action="POST">
     <div class="form-group">
       <label for="example-text">Example Text</label>
@@ -115,3 +114,38 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+<script src="/js/cookie.js"></script>
+<script>
+   
+      $(document).ready(function () {
+
+         eraseCookie("orderList");
+       
+        });
+
+     //$(document).ready(function () {
+
+    //$("body").on("click", "button[name=add]", function () {
+      //  if ($("#orderList").text() == '') {
+         //   $("#orderList").text($(this).val())
+       //} else {
+         //   $("#orderList").append("<br/>")
+           // $("#orderList").append($(this).val())
+
+        //}
+        //function checkCookie() {
+            //var username = getCookie("username");
+            //if (username != "") {
+              //  alert("Welcome again " + username);
+            //} else {
+               // username = prompt("Please enter your name:", "");
+                //if (username != "" && username != null) {
+                   // setCookie("username", username, 365);
+                //}
+            //}
+       // }
+        //$.post("/", orderData, function (data){
+
+        //})
+   // })
+</script>

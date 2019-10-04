@@ -36,9 +36,9 @@
             <p>{{this.dish_name}}</p>
             <p>{{this.dish_desc}}</p>
             <p>{{this.dish_price}}</p>
-
-            <a class="btn btn-primary" href="#" role="button">Add</a>
-            <a class="btn btn-primary" href="#" role="button">Delete</a>
+            <div id="orderBtn">
+                {{> order}}
+            </div>
             <br><br><br><br>
 
             {{/is}}
@@ -46,13 +46,14 @@
         </div>
 
 
+        <!--Order list-->
         <div class="col-md-4 text-center">
 
+            <br><br><br><br>
+            <p> Your Order </p>
 
-            <!--Order list-->
-
-
-
+            <p id="orderList"></p>
+{{> confirmOrder}}
         </div>
 
 
@@ -111,3 +112,28 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+
+<script>
+    
+
+    //$("body").on("click", "button[name=add]", function (event) {
+       //  event.preventDefault();
+        //let orderAdd = $("#orderList").text($(this).val())
+        //let orderAppend = $("#orderList").append($(this).val())
+       
+        //let orderShow = $("#orderList").orderAdd
+
+
+
+       // if ($("#orderList").text() == '') {
+            //$("#orderList").text($(this).val())
+       // } else {
+          //  $("#orderList").append("<br/>")
+          //  $("#orderList").append($(this).val())
+
+       // }
+        //$.post("/", orderData, function (data){
+
+        //})
+   // })
+</script>

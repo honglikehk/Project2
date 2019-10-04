@@ -30,11 +30,11 @@
         </div>
 
 
-{{!--{{#each menu}}--}}
-<!-- IMAGES, NAME AND DESCRIPTION -->
-<!-- IMAGES -->
+        {{!--{{#each menu}}--}}
+        <!-- IMAGES, NAME AND DESCRIPTION -->
+        <!-- IMAGES -->
 
-        
+
 
         <!-- NAME and DESCRIPTION -->
         <div class="col-md-4 text-center">
@@ -45,9 +45,11 @@
             <p>{{this.dish_name}}</p>
             <p>{{this.dish_desc}}</p>
             <p>{{this.dish_price}}</p>
-
-            <a class="btn btn-primary" href="#" role="button">Add</a>
-            <a class="btn btn-primary" href="#" role="button">Delete</a>
+            <div id="orderBtn">
+                {{> order}}
+            </div>
+            <!--<a class="btn btn-primary" href="#" role="button">Add</a>
+            <a class="btn btn-primary" href="#" role="button">Delete</a>--->
             <br><br><br><br>
 
             {{/is}}
@@ -55,13 +57,16 @@
         </div>
 
 
+        <!--Order list-->
         <div class="col-md-4 text-center">
+            <br><br><br><br>
+            <p> Your Order </p>
 
+            
+                <p id="orderList"></p>
+            
 
-            <!--Order list-->
-
-
-
+            {{> confirmOrder}}
         </div>
 
 
@@ -78,19 +83,20 @@
             <p> Waiting time: </p>
 
 
+
         </div>
     </div>
 </div>
 
 
 
-<div class="container">
+<!--<div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
             <a class="btn btn-primary" href="#" role="button">Confirm Order</a>
         </div>
     </div>
-</div>
+</div>-->
 <!--<form class="clearfix mb-4" action="POST">
     <div class="form-group">
       <label for="example-text">Example Text</label>
@@ -120,3 +126,35 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+<script src="/js/cookie.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        // Show order list on each page //
+            var x = getCookie("orderList");
+            if (x != '') {
+               $("#orderList").html(x.replace(/xxxx/g, "<br>"))
+            };
+        });
+
+// Add order button //
+    $("body").on("click", "button[name=add]", function () {
+     
+        if ($("#orderList").text() == '') {
+           $("#orderList").html($(this).val())
+           setCookie("orderList", $(this).val(),1)
+        } else {
+            $("#orderList").append("<br/>")
+            $("#orderList").append($(this).val())
+            setCookie("orderList", $("#orderList").html(), 1)
+        };
+    });
+
+    // Delete order button //
+        $("body").on("click", "button[name=delete]", function () {
+            $("#orderList").html(getCookie("orderList").replace($(this).val(), ''))
+            setCookie("orderList", $("#orderList").html(), 1)
+        })
+
+</script>

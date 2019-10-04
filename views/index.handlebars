@@ -34,8 +34,9 @@
       <p>{{this.dish_name}}</p>
       <p>{{this.dish_desc}}</p>
       <p>{{this.dish_price}}</p>
-      <a class="btn btn-primary" href="#" role="button">Add</a>
-      <a class="btn btn-primary" href="#" role="button">Delete</a>
+      <div id="orderBtn">
+        {{> order}}
+      </div>
       <br><br><br><br>
 
       {{/is}}
@@ -43,21 +44,21 @@
     </div>
 
 
-
-
-
+    <!-- Order List -->
     <div class="col-md-4 text-center">
+      <br><br><br><br>
+      <p> Your Order </p>
 
 
-      <!--Order list-->
+      <p id="orderList"></p>
+
+{{> confirmOrder}}
+
     </div>
 
 
   </div>
 </div>
-
-
-
 
 
 <div class="container">
@@ -108,3 +109,34 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+<script src="/js/cookie.js"></script>
+
+
+
+<script>
+  $(document).ready(function () {
+      var x = getCookie("orderList");
+      if (x != '') {
+        $("#orderList").html(x.replace(/xxxx/g, "<br>"))
+      }
+    });
+ 
+  $("body").on("click", "button[name=add]", function () {
+    
+      if ($("#orderList").text() == '') {
+        $("#orderList").html($(this).val())
+        setCookie("orderList", $(this).val(), 1)  
+    } else {
+        $("#orderList").append("<br/>")  
+        $("#orderList").append($(this).val())
+        setCookie("orderList", $("#orderList").html(), 1)
+    }
+   
+  })
+  // Delete order button //
+  $("body").on("click", "button[name=delete]", function () {
+    $("#orderList").html(getCookie("orderList").replace($(this).val(), ''))
+    setCookie("orderList", $("#orderList").html(), 1)
+  })
+
+</script>
