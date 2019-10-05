@@ -2,9 +2,9 @@
 
 
 
-<a href="/api/admin"><button class="btn btn-light">Admin</button></a>
+{{!-- <a href="/api/admin"><button class="btn btn-light">Admin</button></a> --}}
 {{!-- <a class="btn btn-light" href="#" role="button">Admin</a> --}}
-</div>
+{{!-- </div> --}}
 <!--</div> -->
 
 
@@ -12,9 +12,9 @@
 {{> navBar}}
 
 
-{{!--{{#each menu}}--}}
+
 <!-- IMAGES, NAME AND DESCRIPTION -->
-<!-- IMAGES -->
+
 <div class="container">
     <div class="row">
         <div class="col-md-4">
@@ -53,7 +53,9 @@
             <p> Your Order </p>
 
             <p id="orderList"></p>
-{{> confirmOrder}}
+            {{> clearBtn}}
+            <br><br>
+            {{> confirmOrder}}
         </div>
 
 
@@ -83,57 +85,46 @@
         </div>
     </div>
 </div>
-<!--<form class="clearfix mb-4" action="POST">
-    <div class="form-group">
-      <label for="example-text">Example Text</label>
-      <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-        placeholder="Enter Example Text">
-    </div>
-    <div class="form-group">
-      <label for="example-description">Example Description</label>
-      <textarea class="form-control" id="example-description" aria-describedby="example-description"
-        placeholder="Enter Example Description"></textarea>
-    </div>
-    <button id="submit" class="btn btn-primary float-right">Submit</button>
-  </form>
-  <h3>Examples:</h3>
-  <ul id="example-list" class="list-group">
-    {{#each examples}}
-    <li data-id="{{this.id}}" class="list-group-item">
-      <a href="example/{{this.id}}">{{this.text}}</a>
-      <button class="btn btn-danger float-right delete">ｘ</button>
-    </li>
-    {{/each}}
-  </ul>
-  </div>
-</div>
-</div>
-</div>-->
+
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+<script src="/js/cookie.js"></script>
 
 <script>
-    
+    $(document).ready(function () {
+        // Show order list on each page //
+        var x = getCookie("orderList");
+        if (x != '') {
+            $("#orderList").html(x.replace(/xxxx/g, "<br>"))
+        };
+    });
 
-    //$("body").on("click", "button[name=add]", function (event) {
-       //  event.preventDefault();
-        //let orderAdd = $("#orderList").text($(this).val())
-        //let orderAppend = $("#orderList").append($(this).val())
-       
-        //let orderShow = $("#orderList").orderAdd
+    // Add order button //
+    $("body").on("click", "button[name=add]", function () {
 
+        if ($("#orderList").text() == '') {
+            $("#orderList").html($(this).val())
+            $("#orderList").append("<br/>")
+            setCookie("orderList", $(this).val(), 1)
+        } else {
 
+            $("#orderList").append($(this).val())
+            $("#orderList").append("<br/>")
+            setCookie("orderList", $("#orderList").html(), 1)
+        };
+    });
 
-       // if ($("#orderList").text() == '') {
-            //$("#orderList").text($(this).val())
-       // } else {
-          //  $("#orderList").append("<br/>")
-          //  $("#orderList").append($(this).val())
+    // Delete order button //
+    $("body").on("click", "button[name=delete]", function () {
 
-       // }
-        //$.post("/", orderData, function (data){
+        //alert(getCookie("orderList"))
+        $("#orderList").text(getCookie("orderList").replace($(this).val(), ''))
+        //alert($("#orderList").text())
+        $("#orderList").html($("#orderList").text().replace("<br>", ''))
+        // alert($("#orderList").text())
+        setCookie("orderList", $("#orderList").html(), 1)
+    })
 
-        //})
-   // })
 </script>

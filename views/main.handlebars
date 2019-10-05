@@ -30,13 +30,8 @@
         </div>
 
 
-        {{!--{{#each menu}}--}}
         <!-- IMAGES, NAME AND DESCRIPTION -->
-        <!-- IMAGES -->
-
-
-
-        <!-- NAME and DESCRIPTION -->
+            
         <div class="col-md-4 text-center">
             <br><br>
 
@@ -48,17 +43,9 @@
             <p>{{this.dish_name}}</p>
             <p>{{this.dish_desc}}</p>
             <p>{{this.dish_price}}</p>
-<<<<<<< HEAD
-            <div id="orderBtn">
-                {{> order}}
-            </div>
-            <!--<a class="btn btn-primary" href="#" role="button">Add</a>
-            <a class="btn btn-primary" href="#" role="button">Delete</a>--->
-=======
 
             {{> order}}
            
->>>>>>> origin/master
             <br><br><br><br>
 
             {{/is}}
@@ -70,15 +57,13 @@
         <div class="col-md-4 text-center">
             <br><br><br><br>
             <p> Your Order </p>
-
-<<<<<<< HEAD
-            
+     
                 <p id="orderList"></p>
             
-
+            {{> clearBtn}}
+            <br><br>
             {{> confirmOrder}}
-=======
->>>>>>> origin/master
+            
         </div>
 
 
@@ -102,45 +87,10 @@
 
 
 
-<!--<div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <a class="btn btn-primary" href="#" role="button">Confirm Order</a>
-        </div>
-    </div>
-</div>-->
-<!--<form class="clearfix mb-4" action="POST">
-    <div class="form-group">
-      <label for="example-text">Example Text</label>
-      <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-        placeholder="Enter Example Text">
-    </div>
-    <div class="form-group">
-      <label for="example-description">Example Description</label>
-      <textarea class="form-control" id="example-description" aria-describedby="example-description"
-        placeholder="Enter Example Description"></textarea>
-    </div>
-    <button id="submit" class="btn btn-primary float-right">Submit</button>
-  </form>
-  <h3>Examples:</h3>
-  <ul id="example-list" class="list-group">
-    {{#each examples}}
-    <li data-id="{{this.id}}" class="list-group-item">
-      <a href="example/{{this.id}}">{{this.text}}</a>
-      <button class="btn btn-danger float-right delete">ｘ</button>
-    </li>
-    {{/each}}
-  </ul>
-  </div>
-</div>
-</div>
-</div>-->
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
-<<<<<<< HEAD
 <script src="/js/cookie.js"></script>
-
 
 <script>
     $(document).ready(function () {
@@ -156,40 +106,22 @@
      
         if ($("#orderList").text() == '') {
            $("#orderList").html($(this).val())
+          $("#orderList").append("<br/>")
            setCookie("orderList", $(this).val(),1)
         } else {
-            $("#orderList").append("<br/>")
+            
             $("#orderList").append($(this).val())
+            $("#orderList").append("<br/>")
+            //alert($("#orderList").html())
             setCookie("orderList", $("#orderList").html(), 1)
         };
     });
 
     // Delete order button //
         $("body").on("click", "button[name=delete]", function () {
-            $("#orderList").html(getCookie("orderList").replace($(this).val(), ''))
+            $("#orderList").text(getCookie("orderList").replace($(this).val(), ''))
+            $("#orderList").html($("#orderList").text().replace("<br>", ''))
             setCookie("orderList", $("#orderList").html(), 1)
         })
 
-=======
-<script>
- 
-     //$("#add").on("click", function (event) {
-         $('body').on("click", "button[name=add]", function () {
-         alert ($(this).val());
-            //alert("bbbbbbbb");
-            let userData = {
-                //itemName: $("#add").val()
-                itemName: $(this).val()
-            };
-            $.post("/main", userData,
-                function (data) {
-                   // $("#add").text(data.dish_name);
-                    //$("#add").text(data.dish_price);
-                    //$("#matchImg").attr("src", data.photo);
-                    //$("#resultsModal").modal("toggle");
-                    //alert("Adding character...");
-                });
-        })
-    
->>>>>>> origin/master
 </script>
