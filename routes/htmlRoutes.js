@@ -1,8 +1,6 @@
 /* eslint-disable camelcase */
 var db = require("../models");
 
-
-
 module.exports = function(app) {
   // Load index page
   // eslint-disable-next-line no-unused-vars
@@ -72,8 +70,4 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-  
-  
-    
-
-  };
+};
