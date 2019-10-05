@@ -1,6 +1,8 @@
 /* eslint-disable camelcase */
 var db = require("../models");
 
+
+
 module.exports = function(app) {
   // Load index page
   // eslint-disable-next-line no-unused-vars
@@ -55,17 +57,6 @@ module.exports = function(app) {
     });
   });
 
-  //let currentURL = window.location.origin;
-  app.post("/main", function (req, res) {
-   // console.log("aaaaaaaaaaa");
-    let menuData = req.body;
-    let itemName = menuData.itemName;
-    //let itemPrice = menuData.itemPrice;
-    console.log(itemName);
-    //console.log(itemPrice);
-  
-  });
-  
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(
@@ -81,4 +72,8 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-};
+  
+  
+    
+
+  };
