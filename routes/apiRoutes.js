@@ -15,8 +15,7 @@ module.exports = function(app) {
     });
   });
 
-  //Todo CHECK USER CREDENTAILS
-  app.post("/api/auth", function(req, res) {
+  app.get("/api/auth", function(req, res) {
     console.log(req.body);
     res.status(200).json("hello");
   });
