@@ -18,8 +18,13 @@ var API = {
   },
   getExamples: function() {
     return $.ajax({
-      url: "api/examples",
-      type: "GET"
+      type: "GET",
+      url: "api/auth",
+      data: { username: "ajax", password: "code" },
+      contentType: "application/json; charset=utf-8",
+      dataType: "xml",
+      success: OnSuccessCall,
+      error: OnErrorCall
     });
   },
   deleteExample: function(id) {
