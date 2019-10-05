@@ -7,7 +7,8 @@ module.exports = function(sequelize, DataTypes) {
     dish_name: DataTypes.STRING,
     dish_desc: DataTypes.TEXT,
     dish_price: DataTypes.DECIMAL(10, 2),
-    dish_img: DataTypes.STRING
+    dish_img: DataTypes.STRING,
+    restaurant_name: DataTypes.STRING
   });
 
   MenuItem.associate = function(db) {
