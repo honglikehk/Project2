@@ -99,25 +99,21 @@
   });
 
   $("body").on("click", "button[name=add]", function () {
-
-    if ($("#orderList").text() == '') {
-      $("#orderList").html($(this).val())
-       $("#orderList").append("<br/>")
-     
-      setCookie("orderList", $(this).val(), 1)
-    } else {
      
       $("#orderList").append($(this).val())
        $("#orderList").append("<br/>")
       setCookie("orderList", $("#orderList").html(), 1)
-    }
+    
 
   })
   // Delete order button //
   $("body").on("click", "button[name=delete]", function () {
-    $("#orderList").text(getCookie("orderList").replace($(this).val(), ''))
-    $("#orderList").html($("#orderList").text().replace("<br>", ''))
-    setCookie("orderList", $("#orderList").html(), 1)
+   if ($("#orderList").html().length == 0 || getCookie("orderList").indexOf($(this).val()) == -1) {
+      alert("Nothing to remove from the order")
+    } else {
+      $("#orderList").html(getCookie("orderList").replace($(this).val() + "<br>", ''))
+      setCookie("orderList", $("#orderList").html(), 1)
+    }
   })
 
 </script>
