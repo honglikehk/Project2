@@ -182,5 +182,176 @@
       "dish_price": 4.75,
       "dish_img": "https://i.postimg.cc/bvjcGhq8/white-wine.jpg"
     }
+  ],
+
+  [
+    {
+      "item_class": "Main",
+      "dish_name": "Shaved Prime Rib Sandwich",
+      "dish_desc": "Shaved prime rib topped with onions, mushrooms and Swiss cheese on French Bread",
+      "dish_price": 12.99,
+      "dish_img": "https://i.postimg.cc/d0ppcjp3/shaved-beef.png"
+    },
+    {
+      "item_class": "Main",
+      "dish_name": "Ribeye",
+      "dish_desc": "Cut fresh and hand-trimmed. 12 ounces of our most juicy and flavorful steak, cut fresh from the rib loin, and distinguished by its rich marbling that runs through.",
+      "dish_price": 21.99,
+      "dish_img": "https://i.postimg.cc/zGd40rkn/ribeye.png"
+    },
+    {
+      "item_class": "Main",
+      "dish_name": "New York Strip",
+      "dish_desc": "Fire-grilled to enhance its distinctive flavor! This thick, 12 oz cut is a steakhouse classic.",
+      "dish_price": 21.99,
+      "dish_img": "https://i.postimg.cc/26PDTDrH/new-york-strip.jpg"
+    },
+    {
+      "item_class": "Main",
+      "dish_name": "Prime Rib",
+      "dish_desc": "Slow-roasted for over 11 hours for tenderness and hand-carved to order.",
+      "dish_price": 22.99,
+      "dish_img": "https://i.postimg.cc/htpR6xKQ/prime-rib.jpg"
+    },
+    {
+      "item_class": "Main",
+      "dish_name": "Baby Back Ribs",
+      "dish_desc": "Slow-cooked, fall-off-the-bone baby back ribs seasoned and fire-grilled for extra flavor. Brushed with our housemade sweet and smoky BBQ sauce.",
+      "dish_price": 17.49,
+      "dish_img": "https://i.postimg.cc/NLqz2GBc/full-slab-ribs.jpg"
+    },
+    {
+      "item_class": "Main",
+      "dish_name": "Fillet and Lobster tail",
+      "dish_desc": "The best that surf and turf have to offer. Our signature center-cut filet paired with a succulent cold-water lobster tail and melted butter.",
+      "dish_price": 30.29,
+      "dish_img": "https://i.postimg.cc/Kv727wVN/fillet-lobster.png"
+    },
+    {
+      "item_class": "Main",
+      "dish_name": "Sirloin & Half-Rack Baby Back Ribs",
+      "dish_desc": "Grilled sirloin paired with a half-rack of our slow-roasted, tender BBQ baby back ribs.",
+      "dish_price": 21.99,
+      "dish_img": "https://i.postimg.cc/fbBpqhjc/10oz-ribeye-ribs.jpg"
+    },
+    {
+      "item_class": "Main",
+      "dish_name": "Parmesan Crusted Chicken",
+      "dish_desc": "Our fresh, juicy, grilled chicken becomes irresistible when we top it with our creamy, crunchy Parmesan and garlic cheese crust.",
+      "dish_price": 15.29,
+      "dish_img": "https://i.postimg.cc/zvmsKFF6/parm-chicken.png"
+    },
+    {
+      "item_class": "Starter",
+      "dish_name": "ComboAppetizer",
+      "dish_desc": "Boneless Buffalo Wings (tossed in your choice of Mild or Hot sauce) along with hot Bites and Tater Skins.  Substitute Fried Pickles at no additional charge.   Served with you choice of two dipping sauces.",
+      "dish_price": 10.99,
+      "dish_img": "https://i.postimg.cc/W3yKj6yt/combo-appetizer.jpg"
+    },
+    {
+      "item_class": "Starter",
+      "dish_name": "Boneless Buffalo Wings",
+      "dish_desc": "Hand-breaded all white meat chicken tossed in your choice of Mild or Hot sauce and served with celery and Bleu Cheese dressing.",
+      "dish_price": 9.99,
+      "dish_img": "https://i.postimg.cc/0N8hCNm5/boneless-buffalo-wings.jpg"
+    },
+    {
+      "item_class": "Starter",
+      "dish_name": "Cheese Fries",
+      "dish_desc": "A heaping amount of golden brown steak fries topped with melted cheddar cheese and bacon. ",
+      "dish_price": 10.49,
+      "dish_img": "https://i.postimg.cc/nVyFGvLH/cheese-fries.png"
+    },
+    {
+      "item_class": "Starter",
+      "dish_name": "Grilled Shrimp",
+      "dish_desc": "Seasoned shrimp drizzled with garlic lemon pepper butter and served on toasted fresh-baked bread.",
+      "dish_price": 8.49,
+      "dish_img": "https://i.postimg.cc/C5f2Kny7/grilled-shrimp.jpg"
+    },
+    {
+      "item_class": "Dessert",
+      "dish_name": "Towering Midnight Fudge Cake",
+      "dish_desc": "Moist chocolate cake with Oreo® cookie crumbles baked inside. Served warm with creamy vanilla bean ice cream, hot fudge and whipped cream.",
+      "dish_price": 7.99,
+      "dish_img": "https://i.postimg.cc/QdXrfSZr/midnight-fudge-cake.png"
+    },
+    {
+      "item_class": "Dessert",
+      "dish_name": "Hot Fudge Sundae ",
+      "dish_desc": "Creamy vanilla bean ice cream topped with hot fudge, whipped cream and a cherry.",
+      "dish_price": 15.75,
+      "dish_img": "https://i.postimg.cc/Jn0g9dP9/hot-fudge-sundae-640.jpg"
+    },
+    {
+      "item_class": "Dessert",
+      "dish_name": "Peanut Butter Treat",
+      "dish_desc": "A peanut graham cracker crust covered with chocolate peanut ganache, creamy peanut butter silk and topped with peanut butter cups and roasted peanuts. Finished with a drizzle of caramel sauce.",
+      "dish_price": 5.49,
+      "dish_img": "https://i.postimg.cc/2jZmyV7g/peanutpetite-640x480-gridimage.jpg"
+    },
+    {
+      "item_class": "Dessert",
+      "dish_name": "Baked Chocolate Chip Cookie",
+      "dish_desc": "A warm and gooey classic. A fresh skillet-baked chocolate chip cookie topped with creamy vanilla bean ice cream and a drizzle of chocolate sauce.",
+      "dish_price": 4.69,
+      "dish_img": "https://i.postimg.cc/y8CMkj8Z/chocochipcookieskillet-640x480.jpg"
+    },
+    {
+      "item_class": "Drinks",
+      "dish_name": "Soft drinks (Refills)",
+      "dish_desc": "",
+      "dish_price": 3.0,
+      "dish_img": "https://i.postimg.cc/NMXVsrv4/pop.jpg"
+    },
+    {
+      "item_class": "Drinks",
+      "dish_name": "Iced Tea (Refills) ",
+      "dish_desc": "",
+      "dish_price": 2.75,
+      "dish_img": "https://i.postimg.cc/Gtj1RgWr/iced-tea.jpg"
+    },
+    {
+      "item_class": "Drinks",
+      "dish_name": "Hot Tea (Refills) ",
+      "dish_desc": "",
+      "dish_price": 2.75,
+      "dish_img": "https://i.postimg.cc/rm8BJNdP/hot-tea.jpg"
+    },
+    {
+      "item_class": "Drinks",
+      "dish_name": "Coffee (Refills) ",
+      "dish_desc": "",
+      "dish_price": 2.75,
+      "dish_img": "https://i.postimg.cc/DwG3yZkB/coffee.jpg"
+    },
+    {
+      "item_class": "Drinks",
+      "dish_name": "Milk",
+      "dish_desc": "",
+      "dish_price": 2.75,
+      "dish_img": "https://i.postimg.cc/J009w753/milk.jpg"
+    },
+    {
+      "item_class": "Drinks",
+      "dish_name": "Beer",
+      "dish_desc": "",
+      "dish_price": 4.25,
+      "dish_img": "https://i.postimg.cc/5tqcLRtz/beer.jpg"
+    },
+    {
+      "item_class": "Drinks",
+      "dish_name": "Red Wine",
+      "dish_desc": "",
+      "dish_price": 4.75,
+      "dish_img": "https://i.postimg.cc/ncgtJm5X/red-wine.jpg"
+    },
+    {
+      "item_class": "Drinks",
+      "dish_name": "White Wine",
+      "dish_desc": "",
+      "dish_price": 4.75,
+      "dish_img": "https://i.postimg.cc/bvjcGhq8/white-wine.jpg"
+    }
   ]
 ]
