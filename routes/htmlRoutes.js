@@ -31,19 +31,19 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/register", async (req, res) => {
-    try {
-      const hashedPassword = await bcrypt.hash(req.body.password, 10);
-      db.Admin.create(req.body).then(function(dbAdmin) {
-        email: req.body.email,
-        // password: hashedPassword
-      });
-      res.redirect("/auth");
-    } catch {
-      res.redirect("/register");
-    }
-    req.body.email;
-  });
+  // app.post("/register", async (req, res) => {
+  //   try {
+  //     const hashedPassword = await bcrypt.hash(req.body.password, 10);
+  //     db.Admin.create(req.body).then(function(dbAdmin) {
+  //       email: req.body.email,
+  //       password: hashedPassword
+  //     });
+  //     res.redirect("/auth");
+  //   } catch {
+  //     res.redirect("/register");
+  //   }
+  //   req.body.email;
+  // });
 
   app.post("/auth", verifyToken, (req, res) => {
     jwt.verify(req.token, "secretkey", (err, authData) => {
