@@ -5,30 +5,34 @@
     <!-- <div class="row">-->
     <!--<div class="col-8 offset-2">-->
       <h1>{{title}}</h1>
-      <a href="/register"><button class="btn btn-light">Register</button></a>
+            <a href="/auth"><button class="btn btn-light">Login</button></a>
     </div>
   <!--</div> -->
     <div class="container text-center">
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+<form action="/register" method="POST">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div>
+    <label for="email">Email address</label>
+    <input type="email" id="email" required>
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
   </div>
   <button type="submit" id="submit" class="btn btn-primary">Submit</button>
- 
 </form>
- 
 </div>
 <div class="container">
-  
     <a href="/">← Back To Home</a>
 </div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/js/admin.js"></script>
-

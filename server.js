@@ -1,12 +1,14 @@
 require("dotenv").config();
-var express = require("express");
-var exphbs = require("express-handlebars");
-var path = require("path");
+const express = require("express");
+const exphbs = require("express-handlebars");
+const path = require("path");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 
-var db = require("./models");
+const db = require("./models");
 
-var app = express();
-var PORT = process.env.PORT || 3001;
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
