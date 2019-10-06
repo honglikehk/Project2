@@ -5,208 +5,182 @@
       "dish_name": "Chicken Merlot",
       "dish_desc": "Sauted chicken, artichokes, tomatoes, and capers with a touch of merlot wine",
       "dish_price": 15.75,
-      "dish_img": "https://i.postimg.cc/SN90S3k4/Chicken-Merlot.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/SN90S3k4/Chicken-Merlot.jpg"
     },
     {
       "item_class": "Main",
       "dish_name": "Mediterranean Penne",
       "dish_desc": "Eggplant, tomatoes, mushrooms, bell peppers, spinach, and fresh basil with a light balsamic vinaigrette in marinara sauce and topped with parmesan cheese",
       "dish_price": 12.5,
-      "dish_img": "https://i.postimg.cc/fbJpPrH1/Penne-Verona-1.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/fbJpPrH1/Penne-Verona-1.jpg"
     },
     {
       "item_class": "Main",
       "dish_name": "Spaghetti alla Pomodoro",
       "dish_desc": "Sauted tomatoes and basil tossed with garlic and marinara sauce, topped with parmesan cheese",
       "dish_price": 12.25,
-      "dish_img": "https://i.postimg.cc/7Y4vLX6T/spaghetti-pompodor.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/7Y4vLX6T/spaghetti-pompodor.jpg"
     },
     {
       "item_class": "Main",
       "dish_name": "Ravioli in Spinach Sauce",
       "dish_desc": "Fresh tomatoes, roasted butternut squash and fresh chopped basil in cream sauce over ravioli topped with parmesan cheese",
       "dish_price": 14.25,
-      "dish_img": "https://i.postimg.cc/B61WjVH2/Ravioli-spinach.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/B61WjVH2/Ravioli-spinach.jpg"
     },
     {
       "item_class": "Main",
       "dish_name": "Lasagna",
       "dish_desc": "Fresh pasta layered with ricotta, mozzarella, parmesan, and bolognese sauce topped with parmesan cheese",
       "dish_price": 13.5,
-      "dish_img": "https://i.postimg.cc/G383DMd7/lasagna.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/G383DMd7/lasagna.jpg"
     },
     {
       "item_class": "Main",
       "dish_name": "Ravioli Marinara",
       "dish_desc": "Three cheese ravioli in our homemade marinara topped with parmesan cheese",
       "dish_price": 12.5,
-      "dish_img": "https://i.postimg.cc/wBMYpvBf/rav-marinara.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/wBMYpvBf/rav-marinara.jpg"
     },
     {
       "item_class": "Main",
       "dish_name": "Spaghetti and Meatballs",
       "dish_desc": "Our homemade meatballs with marinara sauce over spaghetti topped with parmesan cheese",
       "dish_price": 13.5,
-      "dish_img": "https://i.postimg.cc/jd4pnNw3/spagehti-meat-balls.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/jd4pnNw3/spagehti-meat-balls.jpg"
     },
     {
       "item_class": "Main",
       "dish_name": "Chicken Basil Tortellini",
       "dish_desc": "Sliced tender chicken breast, butternut squash, and zucchini in a basil pesto cream sauce topped with parmesan cheese",
       "dish_price": 15.25,
-      "dish_img": "https://i.postimg.cc/L8krfPJ0/chicken-basil-tortelini.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/L8krfPJ0/chicken-basil-tortelini.jpg"
     },
     {
       "item_class": "Main",
       "dish_name": "Chicken Alfredo",
       "dish_desc": "Our classic fettuccini alfredo with chicken breast topped with parmesan cheese",
       "dish_price": 14.5,
-      "dish_img": "https://i.postimg.cc/pXMvFR0r/chick-alfredo.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/pXMvFR0r/chick-alfredo.jpg"
     },
     {
       "item_class": "Starter",
       "dish_name": "Mushroom and Prawns",
       "dish_desc": "Sauteed tiger prawns and mushrooms with fresh basil and garlic butter sauce, served with bread",
       "dish_price": 8.5,
-      "dish_img": "https://i.postimg.cc/cJkZg3jG/mushroom-prawns.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/cJkZg3jG/mushroom-prawns.jpg"
     },
     {
       "item_class": "Starter",
       "dish_name": "Mozzarella Sticks with Marinara",
       "dish_desc": "The classic handmade mozzarella sticks with homemade marinara",
       "dish_price": 7.0,
-      "dish_img": "https://i.postimg.cc/VkRzwpW6/mozza-marinara.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/VkRzwpW6/mozza-marinara.jpg"
     },
     {
       "item_class": "Starter",
       "dish_name": "Caprese Pompello",
       "dish_desc": "Sliced tomatoes, fresh mozzarella cheese and fresh basil with Olive oil vinaigrette",
       "dish_price": 8.0,
-      "dish_img": "https://i.postimg.cc/h46WqcFM/cheese-pomp.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/h46WqcFM/cheese-pomp.jpg"
     },
     {
       "item_class": "Starter",
       "dish_name": "Sauteed Fresh Mussels",
       "dish_desc": "Sauteed fresh mussels in garlic butter sauce, served with bread",
       "dish_price": 9.0,
-      "dish_img": "https://i.postimg.cc/bJGPQJcD/mussels-garlic-butter.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/bJGPQJcD/mussels-garlic-butter.jpg"
     },
     {
       "item_class": "Starter",
       "dish_name": "Stuffed Portobello Mushroom",
       "dish_desc": "Deep-fried breaded Portobello mushroom stuffed with prosciutto, basil, and cream cheese over Antigua sauce",
       "dish_price": 8.0,
-      "dish_img": "https://i.postimg.cc/FKHNHpTx/mushroom-app.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/FKHNHpTx/mushroom-app.jpg"
     },
     {
       "item_class": "Starter",
       "dish_name": "Sampler Platter",
       "dish_desc": "Sliced provolone cheese, mozzarella cheese, prosciutto, salami, green olives and pepperoncini",
       "dish_price": 8.5,
-      "dish_img": "https://i.postimg.cc/9XZ5VsWh/starter.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/9XZ5VsWh/starter.jpg"
     },
     {
       "item_class": "Desert",
       "dish_name": "Tiramisu ",
       "dish_desc": "The classic Italian dessert. A layer of creamy custard set atop espresso-soaked ladyfingers.",
       "dish_price": 5.25,
-      "dish_img": "https://i.postimg.cc/MpZh7T16/tiramasu.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/MpZh7T16/tiramasu.jpg"
     },
     {
       "item_class": "Desert",
       "dish_name": "Chocolate Cake ",
       "dish_desc": "Rich layers of chocolate cake, dark chocolate cheesecake and creamy custard mousse.",
       "dish_price": 5.25,
-      "dish_img": "https://i.postimg.cc/W1jsQTrC/italian-choc-cake.png",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/W1jsQTrC/italian-choc-cake.png"
     },
     {
       "item_class": "Desert",
       "dish_name": "Spumoni ",
       "dish_desc": "Three scoops of spumoni ice cream topped with claret sauce and whipped cream",
       "dish_price": 5.25,
-      "dish_img": "https://i.postimg.cc/d38zBZW1/spumoni.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/d38zBZW1/spumoni.jpg"
     },
     {
       "item_class": "Drinks",
       "dish_name": "Soft drinks (Refills)",
       "dish_desc": "",
       "dish_price": 3.0,
-      "dish_img": "https://i.postimg.cc/NMXVsrv4/pop.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/NMXVsrv4/pop.jpg"
     },
     {
       "item_class": "Drinks",
       "dish_name": "Iced Tea (Refills) ",
       "dish_desc": "",
       "dish_price": 2.75,
-      "dish_img": "https://i.postimg.cc/Gtj1RgWr/iced-tea.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/Gtj1RgWr/iced-tea.jpg"
     },
     {
       "item_class": "Drinks",
       "dish_name": "Hot Tea (Refills) ",
       "dish_desc": "",
       "dish_price": 2.75,
-      "dish_img": "https://i.postimg.cc/rm8BJNdP/hot-tea.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/rm8BJNdP/hot-tea.jpg"
     },
     {
       "item_class": "Drinks",
       "dish_name": "Coffee (Refills) ",
       "dish_desc": "",
       "dish_price": 2.75,
-      "dish_img": "https://i.postimg.cc/DwG3yZkB/coffee.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/DwG3yZkB/coffee.jpg"
     },
     {
       "item_class": "Drinks",
       "dish_name": "Milk",
       "dish_desc": "",
       "dish_price": 2.75,
-      "dish_img": "https://i.postimg.cc/J009w753/milk.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/J009w753/milk.jpg"
     },
     {
       "item_class": "Drinks",
       "dish_name": "Beer",
       "dish_desc": "",
       "dish_price": 4.25,
-      "dish_img": "https://i.postimg.cc/5tqcLRtz/beer.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/5tqcLRtz/beer.jpg"
     },
     {
       "item_class": "Drinks",
       "dish_name": "Red Wine",
       "dish_desc": "",
       "dish_price": 4.75,
-      "dish_img": "https://i.postimg.cc/ncgtJm5X/red-wine.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/ncgtJm5X/red-wine.jpg"
     },
     {
       "item_class": "Drinks",
       "dish_name": "White Wine",
       "dish_desc": "",
       "dish_price": 4.75,
-      "dish_img": "https://i.postimg.cc/bvjcGhq8/white-wine.jpg",
-      "RestaurantId": 1
+      "dish_img": "https://i.postimg.cc/bvjcGhq8/white-wine.jpg"
     }
   ]
 ]

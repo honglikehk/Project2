@@ -14,7 +14,7 @@
 
 <!-- IMAGES, NAME AND DESCRIPTION -->
 
-<div class="container">
+{{!-- <div class="container">
     <div class="row">
         <div class="col-md-4">
             <br><br>
@@ -29,7 +29,7 @@
             <img src="/images/mushroom_app.jpg">
             <br><br><br><br>
             <img src="/images/starter.jpg">
-        </div>
+        </div> --}}
 
         <!-- NAME and DESCRIPTION -->
         <div class="col-md-4 text-center">
@@ -37,6 +37,7 @@
 
             {{#each menuData}}
             {{#is this.item_class "Drinks" }}
+            <img src="{{this.dish_img}}">
             <p>{{this.dish_name}}</p>
             <p>{{this.dish_desc}}</p>
             <p>{{this.dish_price}}</p>
