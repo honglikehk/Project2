@@ -15,14 +15,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
-app.use(bodyParser.json());
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-
-var Admin = require("./routes/Admins");
-
-app.use("/admin", Admin);
-// app.use(express.static("public/images"));
 
 // Handlebars
 const hbs = exphbs({
