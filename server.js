@@ -2,8 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const exphbs = require("express-handlebars");
 const path = require("path");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
 const db = require("./models");
 
@@ -14,6 +14,14 @@ const PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+
+app.use(bodyParser.json());
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+var Admin = require("./routes/Admins");
+
+app.use("/admin", Admin);
 // app.use(express.static("public/images"));
 
 // Handlebars
@@ -36,8 +44,7 @@ app.engine("handlebars", hbs);
 
 app.set("view engine", "handlebars");
 
-// Routes
-//require("./routes/apiRoutes")(app);
+// require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
@@ -47,7 +54,6 @@ var syncOptions = { force: false };
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
-
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
