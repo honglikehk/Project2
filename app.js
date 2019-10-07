@@ -30,6 +30,31 @@ app.use("/", index);
 app.use("/auth", passport.authenticate("jwt", { session: false }), user);
 app.use("/auth", auth);
 
+passport.use(
+  new LocalStrategy(function(username, password, done) {
+    User.findOne({ username: username }, function(err, user) {
+      if (err) {
+        return done(err);
+      }
+      if (!user) {
+        return done(null, false);
+      }
+      if (!user.verifyPassword(password)) {
+        return done(null, false);
+      }
+      return done(null, user);
+    });
+  })
+);
+
+app.post(
+  "/auth",
+  passport.authenticate("admin", { failureRedirect: "/" }),
+  function(req, res) {
+    res.redirect("/");
+  }
+);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error("Not Found");
