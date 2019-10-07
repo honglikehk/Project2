@@ -6,6 +6,8 @@ module.exports = function(app) {
   // eslint-disable-next-line no-unused-vars
   app.get("/", function(req, res) {
     db.MenuItems.findAll({}).then(function(menuData) {
+      console.log("xxx");
+      // console.log(menuData[0].dataValues);
       res.render("index", {
         title: "Starters",
         msg: "Welcome!",
@@ -15,14 +17,14 @@ module.exports = function(app) {
     });
   });
 
-  // login
   app.get("/auth", function(req, res) {
     res.render("admin", {
-      title: "Admin Login Page"
+      title: "Admin Login"
     });
   });
 
   app.get("/main", function(req, res) {
+    console.log("yyy");
     db.MenuItems.findAll({}).then(function(menuData) {
       res.render("main", {
         title: "Mains",

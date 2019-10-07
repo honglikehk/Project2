@@ -6,7 +6,7 @@
 <!-- CATEGORY NAV BAR -->
 {{> navBar}}
 
-<div class="container">
+{{!-- <div class="container">
     <div class="row">
         <div class="col-md-4">
             <br><br>
@@ -27,48 +27,48 @@
             <img src="/images/chicken_basil_tortelini.jpg">
             <br><br><br><br>
             <img src="/images/chick_alfredo.jpg">
-        </div>
+        </div> --}}
 
 
-        <!-- IMAGES, NAME AND DESCRIPTION -->
-            
-        <div class="col-md-4 text-center">
-            <br><br>
+<!-- IMAGES, NAME AND DESCRIPTION -->
 
-            {{#each menuData}}
-            {{#is this.item_class "Main"}}
+<div class="col-md-4 text-center">
+    <br><br>
 
-            {{!--<img src="{{this.dish_img}}">--}}
+    {{#each menuData}}
+    {{#is this.item_class "Main"}}
 
-            <p>{{this.dish_name}}</p>
-            <p>{{this.dish_desc}}</p>
-            <p>{{this.dish_price}}</p>
+    <img src="{{this.dish_img}}">
 
-            {{> order}}
-           
-            <br><br><br><br>
+    <p>{{this.dish_name}}</p>
+    <p>{{this.dish_desc}}</p>
+    <p>{{this.dish_price}}</p>
 
-            {{/is}}
-            {{/each}}
-        </div>
+    {{> order}}
 
+    <br><br><br><br>
 
-        <!--Order list-->
-        <div class="col-md-4 text-center">
-            <br><br><br><br>
-            <p> Your Order </p>
-     
-                <p id="orderList"></p>
-            
-            {{> clearBtn}}
-            <br><br>
-            {{> confirmOrder}}
-            
-        </div>
+    {{/is}}
+    {{/each}}
+</div>
 
 
+<!--Order list-->
+<div class="col-md-4 text-center">
+    <br><br><br><br>
+    <p> Your Order </p>
 
-    </div>
+    <p id="orderList"></p>
+
+    {{> clearBtn}}
+    <br><br>
+    {{> confirmOrder}}
+
+</div>
+
+
+
+</div>
 </div>
 
 
@@ -95,28 +95,28 @@
 {{!-- <script>
     $(document).ready(function () {
         // Show order list on each page //
-            var x = getCookie("orderList");
-            if (x != '') {
-               $("#orderList").html(x.replace(/xxxx/g, "<br>"))
-            };
-        });
+        var x = getCookie("orderList");
+        if (x != '') {
+            $("#orderList").html(x.replace(/xxxx/g, "<br>"))
+        };
+    });
 
-// Add order button //
+    // Add order button //
     $("body").on("click", "button[name=add]", function () {
-            
-            $("#orderList").append($(this).val())
-            $("#orderList").append("<br/>")
-            setCookie("orderList", $("#orderList").html(), 1)
+
+        $("#orderList").append($(this).val())
+        $("#orderList").append("<br/>")
+        setCookie("orderList", $("#orderList").html(), 1)
     });
 
     // Delete order button //
-        $("body").on("click", "button[name=delete]", function () {
-          if ($("#orderList").html().length == 0 || getCookie("orderList").indexOf($(this).val()) == -1) {
-                alert("Nothing to remove from the order")
-            } else {
-                $("#orderList").html(getCookie("orderList").replace($(this).val() + "<br>", ''))
-                setCookie("orderList", $("#orderList").html(), 1)
-            }
-        })
+    $("body").on("click", "button[name=delete]", function () {
+        if ($("#orderList").html().length == 0 || getCookie("orderList").indexOf($(this).val()) == -1) {
+            alert("Nothing to remove from the order")
+        } else {
+            $("#orderList").html(getCookie("orderList").replace($(this).val() + "<br>", ''))
+            setCookie("orderList", $("#orderList").html(), 1)
+        }
+    })
 
 </script> --}}

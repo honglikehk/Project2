@@ -1,12 +1,14 @@
 require("dotenv").config();
-var express = require("express");
-var exphbs = require("express-handlebars");
-var path = require("path");
+const express = require("express");
+const exphbs = require("express-handlebars");
+const path = require("path");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
-var db = require("./models");
+const db = require("./models");
 
-var app = express();
-var PORT = process.env.PORT || 3000;
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -34,8 +36,7 @@ app.engine("handlebars", hbs);
 
 app.set("view engine", "handlebars");
 
-// Routes
-//require("./routes/apiRoutes")(app);
+// require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
@@ -45,22 +46,15 @@ var syncOptions = { force: false };
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
-
-
-
-    
-
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function () {
-  
-      console.log(
-        "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-        PORT,
-        PORT
-      );
-    });
+  app.listen(PORT, function() {
+    console.log(
+      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      PORT,
+      PORT
+    );
   });
-
+});
 
 module.exports = app;
