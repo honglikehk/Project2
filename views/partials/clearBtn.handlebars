@@ -8,6 +8,8 @@
 
         $("body").on("click", "button[name=clear]", function () {
         eraseCookie("orderList");
+         eraseCookie("orderItemFinal");
+         eraseCookie("orderPrice");
        location.reload() 
         });
 
