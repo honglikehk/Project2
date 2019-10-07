@@ -55,6 +55,20 @@ module.exports = function(app) {
     });
   });
 
+  // Each Table Order //
+ /* app.get("/tableOrder", function (req, res) {
+     //res.json(obj);
+    let userData = req.body
+    let passOrderName = userData.orderName;
+    let passOrderPrice = userData.orderPrice;
+    console.log(passOrderName)
+    console.log(passOrderPrice)
+    res.render("tableOrder", {
+      title: "Tables Order",
+      //data: obj
+    });
+  });*/
+
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(
